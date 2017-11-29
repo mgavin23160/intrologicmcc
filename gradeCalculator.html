@@ -1,0 +1,71 @@
+<!DOCTYPE html> 
+<header> <title> Grade Calculator</title>
+ <link rel="stylesheet" type="text/css" href="main.css">
+</header>
+
+<div class="container">
+
+
+<div class="banner"> 
+<h1> Introduction to Logic</h1>
+<ul> 
+<li> <a href="index">Home </a></li> 
+<li> <a href="attachments/syllabus.docx">Syllabus </a></li> 
+<li> <a href="schedule">Schedule </a></li> 
+<li> <a href="unit1">Unit 1</a></li> 
+<li> <a href="unit2">Unit 2 </a></li> 
+<li> <a href="unit3">Unit 3 </a></li> 
+<li> <a href="unit4">Unit 4 </a></li> 
+<li> <a href="gradeCalculator"> Grade Calculator </a> </li> 
+</ul> 
+
+	</div> 
+	
+<div class="wrapper"> 
+
+<h2> Grade Calculator</h2> 
+
+<p>Enter your scores to get an estimate of your grade, or enter hypothetical scores to get the corrseponding grade. You can leave the entries blank for the tests you haven't taken yet, but you must enter a grade for homework. If you aren't sure what your homework grade is, then estimate. Bear in mind, your actual grade may be different if you have incorrect values, and scores may be rounded differently in my actual gradebook. </p>
+
+Test 1 <input id="test1"> </br>
+Test 2 <input id="test2"></br>
+Test 3 <input id="test3"></br>
+Test 4 <input id="test4"></br>
+Homework <input id="homework">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="grade"></p>
+
+<script>
+function myFunction() {
+
+   //get input values
+    var t1 = document.getElementById("test1").value;
+    var t2 = document.getElementById("test2").value;
+    var t3 = document.getElementById("test3").value;
+    var t4 = document.getElementById("test4").value;
+    var h = document.getElementById("homework").value;
+
+	
+	
+	// Decide the corresponding numerator and denominator terms
+	if(t1==""){var d1=0; var n1=0;} else {var d1=1; var n1=parseInt(t1,10);};
+	if(t2==""){var d2=0; var n2=0;} else {var d2=1; var n2=parseInt(t2,10);};
+	if(t3==""){var d3=0; var n3=0;} else {var d3=1; var n3=parseInt(t3,10);};
+	if(t4==""){var d4=0; var n4=0;} else {var d4=1; var n4=parseInt(t4,10);};
+	
+	var grade=.88*(n1+n2+n3+n4)/(d1+d2+d3+d4)+.12*parseInt(h,10);
+	
+	if(h==""){document.getElementById("grade").innerHTML="You must enter a homework grade."} 
+		else {document.getElementById("grade").innerHTML = "With these scores, your grade would be " + grade + ".";}
+
+}
+</script>
+
+
+
+
+</br> </br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
+
+</body></html> 

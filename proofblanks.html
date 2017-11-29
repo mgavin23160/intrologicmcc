@@ -1,0 +1,283 @@
+
+<!DOCTYPE html> 
+<header> <title> Proofs </title>
+ <link rel="stylesheet" type="text/css" href="main.css">
+ <style> 
+ .exercises {-moz-column-count: 2; -webkit-column-count: 2; column-count: 2;}
+ 
+ </style>
+ 
+ 
+</header>
+
+<body> 
+
+
+<div class="container">
+
+<div class="banner"> 
+<h1> Introduction to Logic</h1>
+<ul> 
+<li> <a href="index">Home </a></li> 
+<li> <a href="attachments/syllabus.docx">Syllabus </a></li> 
+<li> <a href="schedule">Schedule </a></li> 
+<li> <a href="unit1">Unit 1</a></li> 
+<li> <a href="unit2">Unit 2 </a></li> 
+<li> <a href="unit3">Unit 3 </a></li> 
+<li> <a href="unit4">Unit 4 </a></li> 
+<li> <a href="gradeCalculator"> Grade Calculator </a> </li> 
+</ul> 
+
+	</div> 
+
+ 
+
+<div class="wrapper"> 
+<h2> Practice with Inference Rules</h2> 
+
+<p> Fill in the blanks, and click "Submit" to see if your answer is correct. Sometimes the blank is a conclusion; sometimes it's a premise. Sometimes it's the name of a rule. Use the standard abbreviation if it's the name of a rule. To get it right, you have to type your answer in just the right format. Use capital letters, not lowercase. Exclude parentheses that would surround the entire sentence. Put a space between a binary operator and the sentences it connects. Put a space between a tilde and any sentence on its right, even one that also starts with a tilde. Don't add any spaces before or after the entire sentence. Use the following symbols in place of those your keyboard doesn't have:</p> 
+<ul> 
+	<li> For dot, use a regular period. </li> 
+	<li> For wedge, use a lowercase v. </li> 
+	<li> For horseshoe, use "->". (That's a dash followed by a right corner bracket.)</li> 
+	<li> For triple bar, use "<->". (That's a left corner bracket, a dash, and then a right corner bracket.</li> 
+</ul> 
+
+
+
+<div class = "exercises"> 
+<ol> 
+		<li> <ol>
+		<li> A v B </li> 
+		<li>~ A </li> 
+		<li> <input id="b">&nbsp;1,2, DS</li> 
+		<button type="button" onclick="checkproof1()">Submit</button>
+
+		<p id="response1"></p> 
+				<script>
+					function checkproof1(){
+						var x=document.getElementById("b").value;
+						
+						if(x=="B") {document.getElementById("response1").innerHTML="Good job!"} else 
+							{document.getElementById("response1").innerHTML="Sorry, that's not right."} 
+					}
+				</script>
+
+		</ol> </li> 
+
+		<li> <ol>
+					<li> A v (B . C) </li> 
+					<li> ~ A </li> 
+					<li> <input id="BandC">&nbsp; 1,2, DS </li>  
+					<button type="button" onclick="checkproof2()">Submit</button>
+
+					<p id="response2"></p> 
+							<script>
+								function checkproof2(){
+									var x=document.getElementById("BandC").value;
+									
+									
+									if(x=="B . C") {document.getElementById("response2").innerHTML="Good job!"} else 
+										{document.getElementById("response2").innerHTML="Sorry, that's not right."} 
+								}
+							</script>
+
+		</ol></li>  
+		
+		
+		<li> <ol>
+					<li> (A . B) v (B -> C) </li> 
+					<li> ~ (A . B) </li> 
+					<li> <input id="BimpliesC">&nbsp; 1,2, DS </li>  
+					<button type="button" onclick="checkproof3()">Submit</button>
+
+					<p id="response3"></p> 
+							<script>
+								function checkproof3(){
+									var x=document.getElementById("BimpliesC").value;
+									
+									
+									if(x=="B -> C") {document.getElementById("response3").innerHTML="Good job!"} else 
+										{document.getElementById("response3").innerHTML="Sorry, that's not right."} 
+								}
+							</script>
+
+		</ol></li> 
+		
+		<li> <ol>
+					<li> [(A -> B) . (D v ~ E)] v [(A -> B) . (~ D . E)] </li> 
+					<li> <input id="leftside"> </li> 
+					<li> (A -> B) . (~ D . E) 1,2, DS </li>  
+					<button type="button" onclick="checkproof4()">Submit</button>
+
+					<p id="response4"></p> 
+							<script>
+								function checkproof4(){
+									var x=document.getElementById("leftside").value;
+									
+									
+									if(x=="~ [(A -> B) . (D v ~ E)]"|| x=="~ ((A -> B) . (D v ~ E))") {document.getElementById("response4").innerHTML="Good job!"} else 
+										{document.getElementById("response4").innerHTML="Sorry, that's not right."} 
+								}
+							</script>
+
+		</ol></li>
+		
+		<li> <ol>
+					<li> A -> B </li> 
+					<li> A </li> 
+					<li> <input id="b5">&nbsp; 1,2, MP </li>  
+					<button type="button" onclick="checkproof5()">Submit</button>
+
+					<p id="response5"></p> 
+							<script>
+								function checkproof5(){
+									var x=document.getElementById("b5").value;
+									
+									
+									if(x=="B") {document.getElementById("response5").innerHTML="Good job!"} else 
+										{document.getElementById("response5").innerHTML="Sorry, that's not right."} 
+								}
+							</script>
+
+		</ol></li>
+
+		
+		
+		
+		
+		
+
+
+		<li> <ol>
+					<li> A -> (B . C) </li> 
+					<li> A </li> 
+					<li> <input id="bandc6">&nbsp; 1,2, MP </li>  
+					<button type="button" onclick="checkproof6()">Submit</button>
+
+					<p id="response6"></p> 
+							<script>
+								function checkproof6(){
+									var x=document.getElementById("bandc6").value;
+									
+									
+									/*if(x=="B . C") {document.getElementById("response6").innerHTML="Good job!"} else 
+										{document.getElementById("response6").innerHTML="Sorry, that's not right."} */
+										document.getElementById("response6").innerHTML=x.trim();
+								}
+							</script>
+
+		</ol></li>
+		
+		
+		
+		<li> <ol>
+					<li> (A . B) -> C </li> 
+					<li> (A . B)</li> 
+					<li> <input id="c7">&nbsp; 1,2, MP </li>  
+					<button type="button" onclick="checkproof7()">Submit</button>
+
+					<p id="response7"></p> 
+							<script>
+								function checkproof7(){
+									var x=document.getElementById("c7").value;
+									
+									
+									if(x=="C") {document.getElementById("response7").innerHTML="Good job!"} else 
+										{document.getElementById("response7").innerHTML="Sorry, that's not right."} 
+								}
+							</script>
+
+		</ol></li>
+		
+		<!-- 8 -->
+		<li> <ol>
+					<li> A -> (B . C) </li> 
+					<li> ~ (B . C)</li> 
+					<li> <input id="notA8">&nbsp; 1,2, MT </li>  
+					<button type="button" onclick="checkproof8()">Submit</button>
+
+					<p id="response8"></p> 
+							<script>
+								function checkproof8(){
+									var x=document.getElementById("notA8").value;
+									
+									
+									if(x=="~ A") {document.getElementById("response8").innerHTML="Good job!"} else 
+										{document.getElementById("response8").innerHTML="Sorry, that's not right."} 
+								}
+							</script>
+
+		</ol></li>
+		
+		<li> <ol>
+					<li> (A -> B) . (C -> D) </li> 
+					<li> A v C </li> 
+					<li> <input id="BorD9">&nbsp; 1,2, CD </li>  
+					<button type="button" onclick="checkproof9()">Submit</button>
+
+					<p id="response9"></p> 
+							<script>
+								function checkproof9(){
+									var x=document.getElementById("BorD9").value;
+									
+									
+									if(x=="B v D") {document.getElementById("response9").innerHTML="Good job!"} else 
+										{document.getElementById("response9").innerHTML="Sorry, that's not right."} 
+								}
+							</script>
+
+		</ol></li>
+		
+		<li> <ol>
+					<li> [(A . B) -> C] . [D -> (E . F)] </li> 
+					<li> (A . B) v D</li> 
+					<li> <input id="ans10">&nbsp; 1,2, CD </li>  
+					<button type="button" onclick="checkproof10()">Submit</button>
+
+					<p id="response10"></p> 
+							<script>
+								function checkproof10(){
+									var x=document.getElementById("ans10").value;
+									
+									
+									if(x=="C v (E . F)") {document.getElementById("response10").innerHTML="Good job!"} else 
+										{document.getElementById("response10").innerHTML="Sorry, that's not right."} 
+								}
+							</script>
+
+		</ol></li>
+		
+		
+		<!-- This one's an experiment
+		<li> <ol>
+					<li> (A . B) v (B -> C) </li> 
+					<li> B . ~ C </li> 
+					<li> ~~B . ~ C &nbsp; 2, <input id="dn"></li> 
+					<li> <input id="notNotBorC">&nbsp;3,DM</li> 
+					<li> ~(B -> C)&nbsp;4, <input id="dm"></li> 
+					<li> (B -> C) v (A . B) &nbsp;1, <input id="Com"> </li> 
+					<li> <input id="aAndb"> &nbsp;5,6, DS</li> 
+					<li> A&nbsp; 7, Simp</li> 
+					<button type="button" onclick="checkproofn()">Submit</button>
+
+					<p id="responsen"></p> 
+							<script>
+								function checkproofn(){
+									var x=document.getElementById("dn").value;
+									var y=document.getElementById("notNotBorC").value;
+									var z=document.getElementById("dm").value;
+									
+									if(x=="DN"&&y=="~(~B v C)") {document.getElementById("responsen").innerHTML="Good job!"} else 
+										{document.getElementById("responsen").innerHTML="Sorry, that's not right."} 
+								}
+							</script>
+
+		</ol></li>  -->
+
+
+</ol> 
+</div class = "exercises">
+
+</div> 
+</div> 

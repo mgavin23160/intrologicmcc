@@ -1,0 +1,66 @@
+body { background: -webkit-linear-gradient(black, red); /* Safari 5.1-6.0 */
+    background: -o-linear-gradient(black, red); /* Opera 11.1-12.0 */ 
+    background: -moz-linear-gradient(black, red); /* Firefox 3.6-15 */
+    background: linear-gradient(black, red); /* Standard syntax */
+	margin: 0; 
+	padding: 0;
+	border: none;
+
+}
+
+
+
+
+.container {background-color:white; width:84%; margin:auto; margin-top:0; z-index:+3;
+}
+
+.wrapper {margin-top:120px; background-color: white; z-index: -1; padding: 20px;
+}
+.wrapper h2 {text-align: center;}
+
+.banner {display: inline; position: fixed; top: 0; left:7.99%; background-color: white; width:84.05%; height: 120px;
+	
+}
+
+	.banner ul {list-style-type: none;
+	}
+	.banner ul li {display: inline;margin: 3em;font-size:14px;}
+
+#grade {text-indent: 20px;
+}
+
+.sidebar {position:fixed; top:114px; right:9%;background-color: white; border:solid black 2px; padding:4px;
+	
+}
+
+	.sidebar ul {list-style-type: none; indent:none; padding:10px;
+		
+	}
+
+	.sidebar h3 { text-align:center;
+		
+	}
+
+
+
+.lesson {border-bottom: solid #cdcdcd 1px;
+	
+}
+
+.content {width:100%; display:inline-block; vertical-align: top; 
+	
+}
+
+.due { width:34%; display:inline-block; vertical-align: top;
+	
+}
+
+
+.schedule {width: 85%; margin:auto;
+	}
+	
+.schedule tr:nth-child(even){background-color: #CCC;
+	}
+	
+	
+	
